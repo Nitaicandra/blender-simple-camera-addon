@@ -16,7 +16,7 @@ class SimplePanel(Panel): # creates a panel
         row = layout.row()
         col=row.column()
         
-        col.prop_search(context.scene, "cameratrack", context.scene, "objects", text="Camera")
+        col.prop_search(context.scene, "cameratrack", context.scene, "objects", text="Camera") # Prop search stores its information inside of the property defined above
         col.prop_search(context.scene, "target", context.scene, "objects", text="Target")
         col.operator("object.rotate", text="Tracks") # THIS IS WHAT DEFINES WHAT HAPPENS WHEN YOU CLICK THE BUTTON AND WHAT TEXT IS DISPLAYED ON THE BUTTON
 
