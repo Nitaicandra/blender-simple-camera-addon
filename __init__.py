@@ -23,7 +23,7 @@ else:
     from . panel import SimplePanel # imports the simplePanel class found in the panel
 
 
-classes = (SimpleOperator, SimplePanel) # defines a new class that inherits from simple operator and simple panel
+classes = (SimpleOperator, SimplePanel) # Creates a tuple that will be iterated on in order to register each class
 
 def register(): # a function named register that goes through the classes defined by classes and registers each might be able to be named anything
    for c in classes: # for loop iterates through the classes
