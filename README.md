@@ -1,6 +1,7 @@
 
 # blender-simple-camera-addon 
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/89361982/130404764-e7188ca9-7762-4c54-8581-6a031c7c7d1f.gif)
+
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/89361982/144505557-e0a0aef6-2475-4340-8fa1-30ad81130cbb.gif)
 
 Install by placing the extracted folder in blender\(Version number)\scripts\addons\
 
