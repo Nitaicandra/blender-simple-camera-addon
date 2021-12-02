@@ -21,7 +21,7 @@ class SimpleOperator(Operator): # creates a class that inherits from bpy.types.O
        
         so = bpy.context.active_object # unecessary gets context of active object
         
-        # gets all data from camera based on name
+        # gets all data from the object selected in panel
         camera = context.scene.cameratrack
         Cx = camera.location[0]
         
@@ -30,7 +30,7 @@ class SimpleOperator(Operator): # creates a class that inherits from bpy.types.O
         Crx = camera.rotation_euler[0]
         Crz = camera.rotation_euler[2]
 
-        # gets all data from empty based on name
+        # gets all data from empty based on the object selected in panel
         empty = context.scene.target
         Ex = empty.location[0]
         Ey = empty.location[1]
@@ -50,9 +50,9 @@ class SimpleOperator(Operator): # creates a class that inherits from bpy.types.O
         camera.rotation_euler[2] = 0
         Yeq = 1
         Xeq = 1
-        # fix zero error it doesnt *FIX PLEASE*
+        
         Yeq = math.atan(Zdistance/XYPythagorusDistance)+1.5708
-        if not(Ydistance == 0):
+        if not(Ydistance == 0): #fixes division by zero error
             
             Xeq = -1*math.atan(Xdistance/Ydistance)
         else:
