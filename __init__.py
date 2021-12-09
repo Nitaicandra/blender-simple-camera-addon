@@ -13,19 +13,19 @@ bl_info = {
 
 
 
-if "bpy" in locals():
+if "bpy" in locals(): #
     import importlib
     importlib.reload(op)
     importlib.reload(panel)
 else:
     import bpy
     from . op import SimpleOperator # imports the simpleOperator class found in the op file
-    from . panel import SimplePanel # imports the simplePanel class found in the panel
+    from . panel import SimplePanel # imports the simplePanel class found in the panel file
 
 
 classes = (SimpleOperator, SimplePanel) # Creates a tuple that will be iterated on in order to register each class
 
-def register(): # a function named register that goes through the classes defined by classes and registers each might be able to be named anything
+def register(): # a function named register that goes through the classes defined by classes and registers each 
    for c in classes: # for loop iterates through the classes
        bpy.utils.register_class(c) #for each stage calles a a method form bpy.utils
 
