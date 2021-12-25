@@ -57,6 +57,9 @@ class SimpleOperator(Operator): # creates a class that inherits from bpy.types.O
             Xeq = -1*math.atan(Xdistance/Ydistance)
         else:
             Xeq = math.radians(270)
+        #fixes xy error
+         if(Cy == 0 and Cx<Ex):
+            Xeq = Xeq + math.radians(180)
         # orignal sine method works but is less efficient
         #Xeq =-1*math.asin((Ex - Cx)/((((Ex-Cx)**2)+((Ey-Cy)**2))**(1/2)))
         #Yeq =math.asin((Ez - Cz)/((((Ez-Cz)**2)+((Ex-Cx)**2))**(1/2)))+ 1.5708
